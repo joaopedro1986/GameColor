@@ -1,10 +1,10 @@
 var colors = [
-    'rgb(255,0,0)',
-    'rgb(255,255,0)',
-    'rgb(0,255,0)',
-    'rgb(0 ,255,255)',
-    'rgb(0,0,255)',
-    'rgb(255,0,255)'
+    'rgb(255, 0, 0)',
+    'rgb(255, 255, 0)',
+    'rgb(0, 255, 0)',
+    'rgb(0, 255, 255)',
+    'rgb(0, 0, 255)',
+    'rgb(255, 0, 255)'
 ]
 
 var squares = document.querySelectorAll(".square");
@@ -19,6 +19,12 @@ for (var i=0; i< squares.length; i++){
     //add click listiners to squares
     squares[i].addEventListener("click", function(){
      //grab color of clicked square
-     alert(this.style.backgroundColor);    
+  
+    
+     if (this.style.backgroundColor === pickedColor){
+         alert("Correct");
+     } else {
+         alert('Wrong!!');
+     }
     });
 }
